@@ -1,16 +1,16 @@
 import { useState } from 'react';
-import AnotherComponent from './AnotherComponent'
+import AnotherComponent from './AnotherComponent';
 import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
 
   function decrement() {
-    setCount(count - 1);
+    setCount(prevCount => prevCount - 1);
   }
 
   function increment() {
-    setCount(count + 1);
+    setCount(prevCount => prevCount + 1);
   }
   return (
     <div className="App">
